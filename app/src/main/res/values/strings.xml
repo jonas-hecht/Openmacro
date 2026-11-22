@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Openmacro</string>
+
+    <!-- Macro list -->
+    <string name="new_macro">New macro</string>
+    <string name="no_macros">No macros yet. Tap + to create one.</string>
+    <string name="no_trigger">No trigger</string>
+    <string name="no_actions">no actions</string>
+
+    <!-- Macro editor -->
+    <string name="edit_macro">Edit macro</string>
+    <string name="macro_name">Name</string>
+    <string name="trigger">Trigger</string>
+    <string name="actions">Actions</string>
+    <string name="add_trigger">Add trigger</string>
+    <string name="add_action">Add action</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="remove">Remove</string>
+    <string name="back">Back</string>
+    <string name="delete_macro_question">Delete this macro?</string>
+    <string name="requires_shizuku">Requires Shizuku</string>
+    <string name="choose_bluetooth_device">Choose Bluetooth device</string>
+    <string name="bluetooth_permission_required">Openmacro needs the \"Nearby devices\" permission to list paired Bluetooth devices and detect when they connect.</string>
+    <string name="no_paired_devices">No paired devices found. Turn on Bluetooth and pair the device in the system settings first.</string>
+    <string name="grant_permission">Grant permission</string>
+
+    <!-- Triggers -->
+    <string name="trigger_bluetooth_connected">Bluetooth device connected</string>
+    <string name="trigger_bluetooth_summary">When %1$s connects</string>
+
+    <!-- Actions -->
+    <string name="action_wifi_hotspot_on">Turn on Wi‑Fi hotspot</string>
+    <string name="action_mobile_data_on">Turn on mobile data</string>
+
+    <!-- Shizuku -->
+    <string name="shizuku_not_running">Shizuku is not running. Some of your macros need Shizuku to turn on the Wi‑Fi hotspot or mobile data. Install and start Shizuku.</string>
+    <string name="shizuku_permission_required">Openmacro needs permission to use Shizuku.</string>
+    <string name="shizuku_permission_denied">Openmacro was denied access to Shizuku. Allow it in the Shizuku app.</string>
+    <string name="open_shizuku">Open Shizuku</string>
+
+    <!-- Background service and notifications -->
+    <string name="channel_service">Macro service</string>
+    <string name="channel_errors">Macro errors</string>
+    <string name="service_notification_title">Openmacro is running</string>
+    <plurals name="service_notification_text">
+        <item quantity="one">%d macro enabled</item>
+        <item quantity="other">%d macros enabled</item>
+    </plurals>
+    <string name="error_notification_title">Macro \"%1$s\" failed</string>
+    <string name="error_shizuku_unavailable">Shizuku is not running or Openmacro has no permission to use it.</string>
+    <string name="fgs_special_use_description">Listens for macro triggers (such as Bluetooth devices connecting) and runs the user\'s automation macros.</string>
+</resources>
