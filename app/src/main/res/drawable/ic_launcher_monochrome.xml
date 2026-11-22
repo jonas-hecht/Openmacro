@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+     License, v. 2.0. If a copy of the MPL was not distributed with this
+     file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Ring ("O" of Openmacro), cut out around the bolt -->
+    <group>
+        <clip-path android:pathData="M0,0H108V108H0ZM55.57,20.8L38.62,59.2L49.28,59.2L40.5,100.15L69.15,45.8L59.81,45.8L70.31,20.8Z" />
+        <path
+            android:fillColor="#FF000000"
+            android:fillType="evenOdd"
+            android:pathData="M54,29.5A24.5,24.5 0,1 1,54 78.5A24.5,24.5 0,1 1,54 29.5ZM54,36.5A17.5,17.5 0,1 0,54 71.5A17.5,17.5 0,1 0,54 36.5Z" />
+    </group>
+    <!-- Lightning bolt: trigger → action -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M57,23L42,57L52,57L46,85L65.5,48L56.5,48L67,23Z" />
+</vector>
