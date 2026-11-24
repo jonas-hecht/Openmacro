@@ -60,10 +60,14 @@ class MacroService : Service() {
             Notifications.serviceNotification(this, activeMacros().size),
             ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE,
         )
+        // Must be exported: Bluetooth broadcasts are sent by the Bluetooth stack
+        // (com.android.bluetooth, uid 1002), not by the system uid, so a NOT_EXPORTED
+        // receiver never gets them. ACL_CONNECTED is a protected broadcast, so no other
+        // app can spoof it.
         registerReceiver(
             bluetoothReceiver,
             IntentFilter(BluetoothDevice.ACTION_ACL_CONNECTED),
-            RECEIVER_NOT_EXPORTED,
+            RECEIVER_EXPORTED,
         )
     }
 
