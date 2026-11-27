@@ -60,7 +60,9 @@ object SystemServices {
 
         val code = withTimeoutOrNull(15_000) { result.await() }
             ?: throw PrivilegedException("No response from tethering service")
-        if (code != TETHER_ERROR_NO_ERROR) {
+        // DUPLICATE_REQUEST (Android 15+): an equivalent request is already pending or
+        // active, i.e. the hotspot is already on or starting. That's the state we want.
+        if (code != TETHER_ERROR_NO_ERROR && code != TETHER_ERROR_DUPLICATE_REQUEST) {
             throw PrivilegedException("Tethering service returned error $code")
         }
     }
@@ -130,5 +132,6 @@ object SystemServices {
 
     private const val TETHERING_WIFI = 0
     private const val TETHER_ERROR_NO_ERROR = 0
+    private const val TETHER_ERROR_DUPLICATE_REQUEST = 18
     private const val DATA_ENABLED_REASON_USER = 0
 }
